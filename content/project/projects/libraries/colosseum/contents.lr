@@ -1,0 +1,34 @@
+name: Colosseum
+---
+project_type: library
+---
+maturity: alpha
+---
+languages: py
+---
+platforms: independent
+---
+short_description: A (partial) implementation of the CSS box and flexbox layout algorithm.
+---
+description:
+
+The algorithm and test suite for this library is a language port of
+`Yoga`_ project, open-sourced by Facebook.
+
+.. _Yoga: https://github.com/facebook/yoga
+---
+help_required: 
+---
+pun:
+
+**C**-olo-**SS**-eum. 
+---
+incomplete: yes
+---
+rtfd_name: colosseum
+---
+customlogo: no
+---
+image: colosseum.png
+---
+github_repo: pybee/colosseum

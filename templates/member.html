@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% from "macros/breadcrumbs.html" import breadcrumbs %}
+{% from "macros/sponsor.html" import sponsorship_level %}
+{% from "macros/translation.html" import transbag %}
+
+{% set t_thanks_before_name = transbag('translate', this.alt, 'thanks_before_name') %}
+{% set t_thanks_after_name = transbag('translate', this.alt, 'thanks_after_name') %}
+
+{% block title %}{{ this.name or '' }}{% endblock %}
+{% block preamble %}
+<div class="banner">
+  <div class="container">
+    <p>{{ breadcrumbs(this) }}</p>
+    <h2>{{ sponsorship_level(this) }}</h2>
+    {% if this.image %} 
+    <a href="{{ this|url }}"><img src="{{ site.get(this.path)|url }}{{ this.image }}"></a>
+    {% endif %}
+    {% if this.level == "historical" %}
+    <p class="period">{{ this.join_date.strftime("%B %Y") }} - {{ this.end_date.strftime("%B %Y") }}
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
+{% block body %}
+{{ this.description }}
+{{ this.contribution }}
+<p>{{ t_thanks_before_name }} {{ this.name or '' }} {{ t_thanks_after_name }}</p>
+{% endblock %}

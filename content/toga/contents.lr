@@ -1,0 +1,7 @@
+_model: redirect
+---
+old_path: /toga/
+---
+new_path: /project/projects/libraries/toga/
+---
+_discoverable: no

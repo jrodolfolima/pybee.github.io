@@ -1,0 +1,43 @@
+{% extends "page.html" %}
+{% from "macros/video.html" import render_video_index %}
+{% from "macros/podcast.html" import render_podcast_index %}
+{% from "macros/article.html" import render_article_index %}
+{% from "macros/pagination.html" import render_pagination %}
+
+{% block main %}
+{% for resource in this.pagination.items %}
+  {% if resource.resource_type == 'article' %}
+    {{ render_article_index(resource) }}
+  {% elif resource.resource_type == 'video' %}
+    {{ render_video_index(resource) }}
+  {% elif resource.resource_type == 'podcast' %}
+    {{ render_podcast_index(resource) }}
+  {% else %}
+    <h3><a href="{{ child|url(alt=this.alt) }}">{{ child.title }}</a></h3>
+  {% endif %}
+{% endfor %}
+{% endblock %}
+{% block gutter %}
+  <div class="col-sm-12 col-md-4 gutter">
+    {{ this.gutter_top }}
+    {{ render_pagination(this.pagination, alt=this.alt) }}
+    <hr>
+    {{ this.gutter }}
+    <ul>
+        {% for resource in this.children.filter(F.editors_pick == True) %}
+        <li>
+            {% if resource.resource_type == 'article' %}
+            <i class="fa fa-file-text" aria-hidden="true"></i>
+            {% elif resource.resource_type == 'video' %}
+            <i class="fa fa-video-camera" aria-hidden="true"></i>
+            {% elif resource.resource_type == 'podcast' %}
+            <i class="fa fa-headphones" aria-hidden="true"></i>
+            {% endif %}
+            <a href="{{ resource|url(alt=this.alt) }}">{{ resource.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <hr>
+    {{ this.gutter_bottom }}
+  </div>
+{% endblock %}

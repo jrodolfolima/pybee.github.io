@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+{% from "macros/breadcrumbs.html" import breadcrumbs %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block preamble %}
+<div class="banner">
+  <div class="container">
+    <p>{{ breadcrumbs(this) }}</p>
+    <h1>{{ this.title }}</h1>
+    <p>{{ this.summary }}</p>
+  </div>
+</div>
+{% endblock %}
+{% block body %}
+<div class="row">
+  <div class="col-lg-8 members">
+{{ this.body }}
+
+{% set members = this.children.filter(F.level == 'gold').filter(F.end_date == null) %}
+{% if members %}
+    <h2>Gold Members</h2>
+  {% for member in members %}
+    {% if member.image %}
+    <a href="{{ member|url(alt=this.alt) }}"><img class="img-fluid" src="{{ site.get(member.path)|url }}{{ member.image }}" alt="{{ member.name }}"></a>
+    {% endif %}
+    <p>{{ member.description }}</p>
+  {% endfor %}
+{% endif %}
+
+{% set members = this.children.filter(F.level == 'silver').filter(F.end_date == null) %}
+{% if members %}
+    <h2>Silver Members</h2>
+  {% for member in members %}
+    {% if member.image %}
+    <a href="{{ member|url(alt=this.alt) }}"><img class="img-fluid" src="{{ site.get(member.path)|url }}{{ member.image }}" alt="{{ member.name }}"></a>
+    {% endif %}
+    <p>{{ member.description }}</p>
+  {% endfor %}
+{% endif %}
+
+{% set members = this.children.filter(F.level == 'bronze').filter(F.end_date == null) %}
+{% if members %}
+    <h2>Bronze Members</h2>
+  {% for member in members %}
+    {% if member.image_small %}
+    <a href="{{ member|url(alt=this.alt) }}"><img class="img-fluid" src="{{ site.get(member.path)|url }}{{ member.image_small }}" alt="{{ member.name }}"></a>
+    {% endif %}
+    <p>{{ member.description }}</p>
+  {% endfor %}
+{% endif %}
+
+{% set members = this.children.filter(F.level == 'adhoc').filter(F.end_date == null) %}
+{% if members %}
+    <h2>AdHoc Members</h2>
+  {% for member in members %}
+    {% if member.image_small %}
+    <a href="{{ member|url(alt=this.alt) }}"><img class="img-fluid" src="{{ site.get(member.path)|url }}{{ member.image_small }}" alt="{{ member.name }}"></a>
+    {% endif %}
+    <p>{{ member.description }}</p>
+      {% if member.contribution %}
+    <p>{{ member.contribution }}</p>
+      {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% set members = this.children.filter(F.level == 'professional').filter(F.end_date == null) %}
+{% if members %}
+    <h2>Professional Members</h2>
+    <ul>
+  {% for member in members %}
+      <li class="professional"><img class="img-fluid" src="{{ member.email|gravatar }}" alt="{{ member.name }}">{% if member.name %}{{ member.name }}{% else %}{{ member.email }}{% endif %}</li>
+  {% endfor %}
+    </ul>
+{% endif %}
+
+{% set members = this.children.filter(F.level == 'individual').filter(F.end_date == null) %}
+{% if members %}
+  <h2>Individual Members</h2>
+  <ul>
+  {% for member in members %}
+    <li>{% if member.name %}{{ member.name }}{% else %}{{ member.email }}{% endif %}</li>
+  {% endfor %}
+  </ul>
+{% endif %}
+
+{% set members = this.children.filter(F.level == 'inkind').filter(F.end_date == null) %}
+{% if members %}
+  <h2>In-Kind Members</h2>
+  {% for member in members %}
+    {% if member.image_small %}
+    <a href="{{ member|url(alt=this.alt) }}"><img class="img-fluid" src="{{ site.get(member.path)|url }}{{ member.image_small }}" alt="{{ member.name }}"></a>
+    {% endif %}
+      {% if member.contribution %}
+    <p>{{ member.contribution }}</p>
+      {% endif %}
+  {% endfor %}
+{% endif %}
+
+  </div>
+  {% if this.gutter %}
+  <div class="col-md-12 col-lg-4">
+    {{ this.gutter }}
+  </div>
+  {% else %}
+  <div class="hidden-md-down col-lg-4">
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

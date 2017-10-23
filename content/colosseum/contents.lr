@@ -1,0 +1,7 @@
+_model: redirect
+---
+old_path: /colosseum/
+---
+new_path: /project/projects/libraries/colosseum/
+---
+_discoverable: no

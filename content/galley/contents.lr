@@ -1,0 +1,7 @@
+_model: redirect
+---
+old_path: /galley/
+---
+new_path: /project/projects/tools/galley/
+---
+_discoverable: no

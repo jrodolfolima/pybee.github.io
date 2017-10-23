@@ -1,0 +1,161 @@
+_model: home
+---
+_template: home.html
+---
+title: Die Python-IDEs
+---
+summary:
+---
+description: BeeWare ist eine Zusammenfassung von Projekten, die das Entwickeln, Testen und Verbreiten von Python-Programmen erleichtert. Alle Projekte können unabhängig voneinander, oder in Kombination miteinander genutzt werden. Jedes Teilprojekt folgt der Unix-Philosophie: „Mache nur eine Sache und mache sie gut.“
+---
+header:
+
+#### button-block ####
+label: Erzähle mir mehr
+----
+link: /project/overview/
+----
+icon:
+----
+type: primary
+----
+size: lg
+----
+is_block: no
+#### button-block ####
+label: Ich möchte helfen
+----
+link: /contributing/
+----
+icon:
+----
+type: primary
+----
+size: lg
+----
+is_block:
+#### button-block ####
+label: Ich möchte spenden
+----
+link: /contributing/membership/
+----
+icon:
+----
+type: primary
+----
+size: lg
+----
+is_block:
+---
+body:
+
+#### text-block ####
+title: ### Native Python Werkzeuge...
+----
+text: Python hat sich als eine fähige Sprache bewährt – zugänglich für Neulinge, aber trotzdem mächtig in den Händen von Experten. Warum sollte Python nicht überall dort verwendet werden, wo du einem Computer sagen willst, was er zu tun hat? Sollten deine Entwicklerwerkzeuge nicht alle Fähigkeiten der Programmiersprache Python ausnutzen können und nicht nur jene, die gut zu den C-Bindungs passen?
+----
+image: python.png
+----
+image_alignment: right
+#### text-block ####
+title: ### ...auf Handy & Desktop...
+----
+text: Interaktion mit Computern findet heutzutage nicht mehr in einer 80x25 Konsole statt. Es passiert auf **Handys, Tablets und Desktop-Computern**, mit ansprechenden grafischen Benutzeroberflächen. Solltest du nicht in der Lage sein, Python auf all diesen Plattformen zu nutzen, um ihre **einzigartigen Vorzüge auszuschöpfen**?
+----
+image: cross-platform.png
+----
+image_alignment: left
+#### text-block ####
+title: ### ...die sich nativ verhalten.
+----
+text: Endnutzer sollten sich nicht darum kümmern müssen, noch sollten sie erkennen, in welcher Programmiersprache ihre App geschrieben wurde. Es fängt damit an, dass die Programme wie native Programme aussehen und sich auch so verhalten. Natives Aussehen, natives Verhalten und Verteilung durch die selben Kanäle wie native Apps. Warum sollten deine Python-Werkzeuge nicht genauso gut funktionieren wie ein natives Werkzeug?
+----
+image: native.png
+----
+image_alignment: right
+#### text-block ####
+title: ## Das ist BeeWare.
+----
+text: Genau das bietet BeeWare. Werkzeuge die dir helfen Python-Code mit einer ansprechenden und nativen Benutzeroberfläche zu schreiben. Um deine Apps auf iOS, Android, MacOS, Linux, Windows und vielen weiteren Plattformen zum laufen zu bringen, liefern wir die nötigen Bibliotheken.
+----
+image: brutus-97.png
+----
+image_alignment: left
+#### text-block ####
+title: ### Open Source
+----
+text: Der Open Source Entwicklungsprozess hat sich als zuverlässigster Weg herausgestellt, um robuste Software zu entwickeln. Deshalb ist die gesamte BeeWare Suite unter BSD lizenziert. Es steht jedem offen sie zu verwenden und zu modifizieren.
+----
+image: opensource.png
+----
+image_alignment: right
+#### text-block ####
+title: ### Alle Beiträge sind willkommen
+----
+text: Es geht nicht nur um Code. Ein erfolgreiches Softwareprojekt erfordert Dokumentation, Designfähigkeit, Feedback und Fehlerberichte. Die BeeWare-Community erkennt an, dass **alle Beiträge wichtig sind** – nicht nur die als Pull-Request auf GitHub ankommen.
+----
+image: labhr.png
+----
+image_alignment: left
+#### text-block ####
+title: ### Aus Vielfalt kommt Stärke
+----
+text: Eine vielfältige Gemeinschaft ist eine starke Gemeinschaft. Für uns bedeutet es, dass Menschen aller Fähigkeits-Level und aller Hintergründe, unabhängig von ihrer Herkunft, ihres Glaubens oder ihrer Orientierung akzeptiert werden. Untermauert wird dies durch unsere `Verhaltensregeln <community/behavior/code-of-conduct/>`__, die rigoros durchgesetzt werden. Das BeeWare-Projekt verpflichtet sich zur **Entwicklung und Pflege einer vielfältigen und einladenden Gemeinschaft**. Zusätzlich bieten wir ein **Mentoren-Programm für jeden** an, der/die sich als Mitwirkende/r engagieren möchte.
+----
+image: diversity.png
+----
+image_alignment: right
+#### text-block ####
+title: Hilf mit!
+----
+text: Wenn das interessant für dich klingt, dann wirf doch einen Blick auf die `BeeWare-Projekte </project/projects>`__ und schau, wie du diese zum entwickeln von Python-Apps nutzen kannst. Oder möchtest du lieber etwas beitragen, hast aber noch nie an einem Open Source Projekt gearbeitet? Dann starte doch mit unserer `Anleitung für Ersthelfer </contributing/first-time/>`__. Du willst gleich voll loslegen? Dann schau dir die `Projekte </project/projects/>`__ an, oder lies dir unseren Leitfaden `Wie kann ich helfen </contributing/how/>`__ durch.
+----
+image:
+----
+image_alignment:
+#### button-block ####
+label:
+
+Beitrag zu BeeWare
+----
+link: /contributing/
+----
+icon: code-fork
+----
+type: primary
+----
+size: lg
+----
+is_block: yes
+#### text-block ####
+title: ### Bleib in Kontakt!
+----
+text: Folge `@PyBeeWare <https://twitter.com/PyBeeWare/>`__ auf Twitter oder `melde dich bei der the BeeWare-Enthusiasten-Mailingliste an, </community/keep-informed/>`__ um Updates, Hinweise, Tipps und Ankündigungen im Zusammenhang mit dem Projekt zu bekommen.
+----
+image:
+----
+image_alignment:
+#### button-block ####
+label: In Kontakt bleiben!
+----
+link: /community/keep-informed/
+----
+icon: envelope
+----
+type: success
+----
+size: lg
+----
+is_block: yes
+#### text-block ####
+title: ### Mitglieder
+----
+text: BeeWare wird von Nutzern wie dir unterstützt! Jedes Bisschen hilft: `Klick hier, um etwas beizutragen </de_DE/contributing/membership/>`__.
+----
+image:
+----
+image_alignment:
+----
+gutter_top: ### Vielen Dank an
+---
+gutter_bottom: ### [... und viele mehr](/project/projects/)

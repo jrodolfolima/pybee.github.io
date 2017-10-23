@@ -1,7 +1,3 @@
-.. image:: http://pybee.org/static/images/brutus-270.png
-    :width: 72px
-    :target: https://pybee.org
-
 pybee.github.io
 ===============
 
@@ -12,31 +8,23 @@ modifications, see the `lektor branch`_ of the codebase.
 
 It is a `Lektor`_-based site.
 
+.. _Lektor: https://getlektor.com
+
 If you want to contribute a modification, you can fork this repository and
 submit a pull request. However, **do not fork the master branch** - fork the
-<<<<<<< HEAD
 `lektor branch`_ and make changes thereinstead.
-=======
-`lektor branch`_ and make changes there instead.
->>>>>>> 11f9fccd2c4ddc273f3f684eefd1d0b999cd1f68
 
 .. _lektor branch: https://github.com/pybee/pybee.github.io/tree/lektor
 
 If you want to test out a change before you submit it, download and install
-`Lektor`_ (note that Lektor is still using Python 2.7):
-
-    $ pip install lektor
-
-Then from the root directory of the checkout, run:
+Lektor; then from the root directory of the checkout, run:
 
     $ lektor server
-
-.. _Lektor: https://getlektor.com
 
 This will `start a webserver`_ that will autoreload whenever you make a change
 to site content.
 
-.. _start a webserver: http://127.0.0.1:5000
+.. _start a webserver: http://127.0.0.1:8000
 
 Community
 ---------
@@ -44,8 +32,6 @@ Community
 You can talk to the community through:
 
 * `@pybeeware on Twitter`_
-
-* BeeWare Gitter channel: `pybee/general`_
 
 * `Tickets on the pybee.github.io issue tracker`_
 
@@ -66,44 +52,16 @@ to date with the original branch. To do this:
 
     $ git fetch upstream
 
-- rebase your **lektor** branch to **upstream** before pushing to git and
+- rebase your **master** branch to **upstream** before pushing to git and
   submitting a pull request::
 
-    $ git rebase upstream/lektor
+    $ git rebase upstream/master
 
 
 .. _BeeWare project: http://pybee.org
 .. _@pybeeware on Twitter: https://twitter.com/pybeeware
-.. _pybee/general: https://gitter.im/pybee/general
 .. _Tickets on the pybee.github.io issue tracker: https://github.com/pybee/pybee.github.io/issues
 .. _log them on Github: https://github.com/pybee/pybee.github.io/issues
 .. _fork the code: https://github.com/pybee/pybee.github.io/tree/lektor
 .. _submit a pull request: https://github.com/pybee/pybee.github.io/pulls
 
-
-Translating
------------
-
-Want to make BeeWare more accessible to non-English-speakers?  Help translate the site!  Steps are as follows:
-
-1. Add language specification to:
-
-	pybee.github.io/BeeWare.lektorproject
-
-   Fill out the name of the language, its url prefix, and the locale.
-
-2. Add translated mirror files at the same directory level as the primary English files  and add appropriate suffixes.
-
-	For example:
-
-		Arabic's locale is 'ar', so you would add...
-
-		contents+ar.lr
-
-		...where the original file name is:
-
-		contents.lr
-
-Note: A great place to start translating is the contributing section:
-
-	pybee.github.io/content/contributing

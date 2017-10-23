@@ -1,0 +1,7 @@
+_model: redirect
+---
+old_path: /contributing/first-time/
+---
+new_path: /contributing/how/first-time/
+---
+_discoverable: no
